@@ -1,0 +1,32 @@
+@page {
+    size: 80mm 150mm;
+    /* Adjust these values for your billing slip size */
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5mm;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 2mm;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* 
+input [type=search] {
+    outline-offset: 2px !important;
+} */

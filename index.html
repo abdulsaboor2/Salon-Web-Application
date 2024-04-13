@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Invice App</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-2 mb-2">
+        <h1>My Invoice App</h1>
+    </header>
+    <div class="container mt-4 mb-5">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Menu Section -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 style="display: inline;" class="mb-0">Menu</h5>
+                        <button style="float: right; border-color: black; margin-left: -2px;
+                        " class="btn btn-primary btn-sm" onclick="ok">Search</button>
+                        <input
+                            style="height: 31px; float: right; border: 1px solid black; padding-left: 5px; outline: none; border-right-color: #007bff;"
+                            type="search" placeholder="Search Here..." />
+                    </div>
+                    <div class="card-body">
+                        <!-- JavaScript will populate this section -->
+                        <ul class="list-group" id="menuList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Invoice Section -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Invoice</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Add this HTML for the discount input -->
+                        <div class="form-group mb-3" id="discountInput" style="display: none;">
+                            <label for="discountPercentage">Enter Discount Percentage:</label>
+                            <input type="number" class="form-control" id="discountPercentage" width="50"
+                                placeholder="Enter discount percentage">
+                        </div>
+                        <button style="padding: 2px 5px;" class="btn btn-primary mb-3" id="addDis"
+                            onclick="toggleDiscountInput()">Add Discount</button>
+                        <button id="printInv" style="padding: 2px 5px;" class="btn btn-primary mb-3"
+                            onclick="printInvoice()">Print
+                            Invoice</button>
+                        <!-- Add this HTML for the "Clear Invoice Data" button -->
+                        <button id="clrs" style="padding: 2px 5px;" class="btn btn-danger mb-3"
+                            onclick="clearInvoice()">Clear</button>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40%;">Product</th>
+                                    <th style="width: 20%;">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="invoiceTable">
+                                <!-- JavaScript will populate this section -->
+                            </tbody>
+                        </table>
+                        <h4>Total: RS <span id="totalAmount">0.00</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap and jQuery for JavaScript functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
