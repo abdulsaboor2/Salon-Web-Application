@@ -154,7 +154,7 @@ menuData.forEach((category) => {
         listItem.style.backgroundColor = "#dedede";
         listItem.innerHTML = `
             ${product.name} - RS ${product.priceRS.toFixed(2)}
-            <button style="border-color: #e5c266; background-color: #e5c266; color: black; font-weight: bold;" 
+            <button style="border-color: #d1a84d; background-color: #d1a84d; color: #fff;" 
             class="btn btn-sm" onclick="addToInvoice('${product.name}', ${product.priceRS})">Add</button>
         `;
         submenu.appendChild(listItem);
